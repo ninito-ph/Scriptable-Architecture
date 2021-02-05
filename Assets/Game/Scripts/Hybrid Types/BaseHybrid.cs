@@ -7,7 +7,7 @@ namespace HybridTypes
     /// ScriptableObject-based variable base class
     /// </summary>
     [Serializable]
-    public abstract class BaseHybrid<T> : ScriptableObject, ISerializationCallbackReceiver where T : IEquatable<T>, IComparable<T>
+    public abstract class BaseHybrid<T> : ScriptableObject, ISerializationCallbackReceiver
     {
         #region Field Declarations
 #pragma warning disable CS0414
