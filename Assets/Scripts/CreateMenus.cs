@@ -5,32 +5,36 @@
     /// </summary>
     public sealed class CreateMenus
     {
-        public const string intReferenceFileName = "Int Reference";
-        public const string intReferenceMenu = "Variables/Int Reference";
-        public const int intReferenceOrder = 0;
+        public const string intVariableFileName = "Int Variable";
+        public const string intVariableMenu = "Variables/Int Variable";
+        public const int intVariableOrder = 0;
 
-        public const string floatReferenceFileName = "Float Reference";
-        public const string floatReferenceMenu = "Variables/Float Reference";
-        public const int floatReferenceOrder = 1;
+        public const string floatVariableFileName = "Float Variable";
+        public const string floatVariableMenu = "Variables/Float Variable";
+        public const int floatVariableOrder = 1;
 
-        public const string boolReferenceFileName = "Bool Reference";
-        public const string boolReferenceMenu = "Variables/Bool Reference";
-        public const int boolReferenceOrder = 2;
+        public const string boolVariableFileName = "Bool Variable";
+        public const string boolVariableMenu = "Variables/Bool Variable";
+        public const int boolVariableOrder = 2;
 
-        public const string StringReferenceFileName = "String Reference";
-        public const string StringReferenceMenu = "Variables/String Reference";
-        public const int StringReferenceOrder = 3;
+        public const string StringVariableFileName = "String Variable";
+        public const string StringVariableMenu = "Variables/String Variable";
+        public const int StringVariableOrder = 3;
 
-        public const string Vector2ReferenceFileName = "Vector2 Reference";
-        public const string Vector2ReferenceMenu = "Variables/Vector2 Reference";
-        public const int Vector2ReferenceOrder = 4;
+        public const string Vector2VariableFileName = "Vector2 Variable";
+        public const string Vector2VariableMenu = "Variables/Structs/Vector2 Variable";
+        public const int Vector2VariableOrder = 4;
 
-        public const string Vector3ReferenceFileName = "Vector3 Reference";
-        public const string Vector3ReferenceMenu = "Variables/Vector3 Reference";
-        public const int Vector3ReferenceOrder = 5;
+        public const string Vector3VariableFileName = "Vector3 Variable";
+        public const string Vector3VariableMenu = "Variables/Structs/Vector3 Variable";
+        public const int Vector3VariableOrder = 5;
 
-        public const string ColorReferenceFileName = "Color Reference";
-        public const string ColorReferenceMenu = "Variables/Color Reference";
-        public const int ColorReferenceOrder = 6;
+        public const string ColorVariableFileName = "Color Variable";
+        public const string ColorVariableMenu = "Variables/Structs/Color Variable";
+        public const int ColorVariableOrder = 6;
+
+        public const string GameObjectVariableFileName = "GameObject Variable";
+        public const string GameObjectVariableMenu = "Variables/Classes/GameObject Variable";
+        public const int GameObjectVariableOrder = 7;
     }
 }
