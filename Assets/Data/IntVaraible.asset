@@ -9,8 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3cfb04d81426a4a91f4087d421ee50, type: 3}
-  m_Name: Int Hybrid
+  m_Script: {fileID: 11500000, guid: a56a9b97a78f01f4b97f217c74f00246, type: 3}
+  m_Name: IntVaraible
   m_EditorClassIdentifier: 
-  _description: 
   _value: 0
+  _readOnly: 0
+  _raiseWarning: 1
+  _isClamped: 0
+  _minClampedValue: 0
+  _maxClampedValue: 0
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
