@@ -2,7 +2,8 @@
 
 namespace ScriptableArchitecture.Variables
 {
-    [CreateAssetMenu(fileName = CreateMenus.intVariableFileName, menuName = CreateMenus.intVariableMenu, order = CreateMenus.intVariableOrder)]
+    [CreateAssetMenu(fileName = CreateMenus.intVariableFileName, 
+        menuName = CreateMenus.intVariableMenu, order = CreateMenus.intVariableOrder)]
     public class IntVariable : Variable<int>
     {
     }
