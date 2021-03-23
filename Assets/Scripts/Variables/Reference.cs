@@ -12,9 +12,9 @@ namespace ScriptableArchitecture.Variables
     public abstract class Reference<T, U> where U : Variable<T>
     {
         #region Field Declarations
-        public bool _useConstant;
-        public T _constant;
-        public U _variable;
+        private bool _useConstant;
+        private T _constant;
+        private U _variable;
         #endregion
 
         #region Properties
@@ -23,29 +23,14 @@ namespace ScriptableArchitecture.Variables
         /// </summary>
         public T Value
         {
-            get
-            {
-                if (_useConstant == true)
-                {
-                    return _constant;
-                }
-
-                if (_variable == null)
-                {
-                    return _constant;
-                }
-                else
-                {
-                    return _variable.Value;
-                }
-            }
+            get => _useConstant ? _constant : _variable.Value;
             set
             {
                 if (_useConstant == true)
                 {
                     _constant = value;
                 }
-
+            
                 if (_variable != null)
                 {
                     _variable.Value = value;
@@ -93,13 +78,5 @@ namespace ScriptableArchitecture.Variables
             return Value.ToString();
         }
         #endregion
-    }
-
-    // Exists because property drawers don't support generic types
-    // This empty non-generic class then allows us to trick unity
-    // into drawing our reference class anyway.
-    public abstract class Reference
-    {
-        
     }
 }
