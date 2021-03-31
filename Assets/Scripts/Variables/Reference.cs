@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ScriptableArchitecture.Variables
 {
@@ -8,12 +7,15 @@ namespace ScriptableArchitecture.Variables
     /// </summary>
     /// <typeparam name="T">The type of the reference value</typeparam>
     /// <typeparam name="U">A variable of the same type of the reference value</typeparam>
-    [Serializable]
+    [System.Serializable]
     public abstract class Reference<T, U> where U : Variable<T>
     {
         #region Field Declarations
+        [SerializeField]
         private bool _useConstant;
+        [SerializeField]
         private T _constant;
+        [SerializeField]
         private U _variable;
         #endregion
 
@@ -23,7 +25,8 @@ namespace ScriptableArchitecture.Variables
         /// </summary>
         public T Value
         {
-            get => _useConstant ? _constant : _variable.Value;
+            get => _useConstant ? _constant : (_variable.Value ?? _constant);
+            
             set
             {
                 if (_useConstant == true)
@@ -39,7 +42,7 @@ namespace ScriptableArchitecture.Variables
         }
         #endregion
 
-        #region Public Methods
+        #region Implicit Operator
         /// <summary>
         /// Removes the need for implementing IComparable, IEquatable and
         /// directly referencing the .Value property, by implicitly
@@ -50,7 +53,9 @@ namespace ScriptableArchitecture.Variables
         {
             return reference.Value;
         }
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Initializes variable as a constant
         /// </summary>
