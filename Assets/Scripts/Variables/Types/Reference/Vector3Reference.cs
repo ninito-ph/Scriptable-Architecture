@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class Vector3Reference : Reference<Vector3, Variable<Vector3>>
+    [System.Serializable]
+    public class Vector3Reference : Reference<Vector3, Vector3Variable>
     {
         public Vector3Reference(Vector3 value) : base(value)
         {

@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class ColorReference : Reference<Color, Variable<Color>>
+    [System.Serializable]
+    public class ColorReference : Reference<Color, ColorVariable>
     {
         public ColorReference(Color value) : base(value)
         {

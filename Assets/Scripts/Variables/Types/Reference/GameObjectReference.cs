@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class GameObjectReference : Reference<GameObject, Variable<GameObject>>
+    [System.Serializable]
+    public class GameObjectReference : Reference<GameObject, GameObjectVariable>
     {
         public GameObjectReference(GameObject value) : base(value)
         {

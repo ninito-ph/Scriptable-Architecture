@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ScriptableArchitecture.Variables
+﻿namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class BoolReference : Reference<bool, Variable<bool>>
+    [System.Serializable]
+    public class BoolReference : Reference<bool, BoolVariable>
     {
         public BoolReference(bool value) : base(value)
         {

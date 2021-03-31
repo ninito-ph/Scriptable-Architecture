@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ScriptableArchitecture.Variables
+﻿namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class IntReference : Reference<int, Variable<int>>
+    [System.Serializable]
+    public class IntReference : Reference<int, IntVariable>
     {
         public IntReference(int value) : base(value)
         {

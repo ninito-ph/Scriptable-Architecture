@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ScriptableArchitecture.Variables
+﻿namespace ScriptableArchitecture.Variables
 {
-    [Serializable]
-    public class FloatReference : Reference<float, Variable<float>>
+    [System.Serializable]
+    public class FloatReference : Reference<float, FloatVariable>
     {
         public FloatReference(float value) : base(value)
         {
