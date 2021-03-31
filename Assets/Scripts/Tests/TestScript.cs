@@ -7,11 +7,8 @@ public class TestScript : MonoBehaviour
     [SerializeField]
     public IntReference _myIntReferenceAsConstant = new IntReference(0);
     [SerializeField]
-    public Vector4Reference _myIntReferenceAsVariable;
+    public IntReference _myIntReferenceAsVariable;
 
-    public Vector3Reference _vec3;
-
-    public Vector4 _vec3normal;
 
     [Header("Int Variable Types")]
     [SerializeField]
