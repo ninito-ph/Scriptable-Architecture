@@ -8,10 +8,16 @@ namespace ScriptableArchitecture.Editor
     /// <summary>
     /// A property drawer for reference variables.
     /// </summary>
-    [CustomPropertyDrawer(typeof(IntReference))]
+    [CustomPropertyDrawer(typeof(BoolReference))]
+    [CustomPropertyDrawer(typeof(ColorReference))]
     [CustomPropertyDrawer(typeof(FloatReference))]
+    [CustomPropertyDrawer(typeof(GameObjectReference))]
+    [CustomPropertyDrawer(typeof(IntReference))]
+    [CustomPropertyDrawer(typeof(StringReference))]
+    [CustomPropertyDrawer(typeof(Vector2Reference))]
+    [CustomPropertyDrawer(typeof(Vector3Reference))]
     [CustomPropertyDrawer(typeof(Vector4Reference))]
-    public sealed class ReferenceDrawer : PropertyDrawer
+    public class ReferenceDrawer : PropertyDrawer
     {
         #region Private Fields
 
@@ -133,7 +139,7 @@ namespace ScriptableArchitecture.Editor
 
         #endregion
 
-        #region Private Classes
+        #region PropertyData Class
 
         /// <summary>
         /// A class containing the data of a property
