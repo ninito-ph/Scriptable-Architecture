@@ -47,6 +47,10 @@
         public const string AnimationCurveVariableMenu = "Variables/Classes/AnimationCurve Variable";
         public const int AnimationCurveVariableOrder = 9;
         
+        public const string AudioClipVariableFileName = "AudioClip Variable";
+        public const string AudioClipVariableMenu = "Variables/Classes/AudioClip Variable";
+        public const int AudioClipVariableOrder = 10;
+        
         // Events
         
         public const string EventFileName = "Event";
@@ -92,5 +96,9 @@
         public const string AnimationCurveEventFilename = "AnimationCurve Event";
         public const string AnimationCurveEventMenu = "Events/Classes/AnimationCurve Event";
         public const int AnimationCurveEventOrder = 10;
+        
+        public const string AudioClipEventFileName = "AudioClip Event";
+        public const string AudioClipEventMenu = "Variables/Classes/AudioClip Event";
+        public const int AudioClipEventOrder = 11;
     }
 }
