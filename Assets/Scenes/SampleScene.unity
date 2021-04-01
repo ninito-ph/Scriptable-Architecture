@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303966846}
   - component: {fileID: 303966845}
+  - component: {fileID: 303966847}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -158,13 +159,17 @@ MonoBehaviour:
     _variable: {fileID: 0}
   _myIntReferenceAsVariable:
     _useConstant: 0
-    _constant: {x: 0, y: 0, z: 0, w: 0}
+    _constant: 0
     _variable: {fileID: 0}
-  _vec3:
+  _myAnimCurve:
     _useConstant: 0
-    _constant: {x: 0, y: 0, z: 0}
+    _constant:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     _variable: {fileID: 0}
-  _vec3normal: {x: 0, y: 0, z: 0, w: 0}
   _IntVariable: {fileID: 11400000, guid: befc797a4ab35724ab27a3ac6edd37f0, type: 2}
 --- !u!4 &303966846
 Transform:
@@ -180,6 +185,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303966847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303966844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05a650de47f43b6876f45ce7a00dc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 943d153a452caf44da0d43e1784a63f6, type: 2}
+  _onEventInvoked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &388384246
 GameObject:
   m_ObjectHideFlags: 0

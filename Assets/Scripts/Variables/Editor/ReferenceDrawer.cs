@@ -8,6 +8,7 @@ namespace ScriptableArchitecture.Editor
     /// <summary>
     /// A property drawer for reference variables.
     /// </summary>
+    [CustomPropertyDrawer(typeof(AnimationCurveReference))]
     [CustomPropertyDrawer(typeof(BoolReference))]
     [CustomPropertyDrawer(typeof(ColorReference))]
     [CustomPropertyDrawer(typeof(FloatReference))]

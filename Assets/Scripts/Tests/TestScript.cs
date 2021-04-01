@@ -9,6 +9,8 @@ public class TestScript : MonoBehaviour
     [SerializeField]
     public IntReference _myIntReferenceAsVariable;
 
+    [SerializeField] public AnimationCurveReference _myAnimCurve;
+
 
     [Header("Int Variable Types")]
     [SerializeField]
