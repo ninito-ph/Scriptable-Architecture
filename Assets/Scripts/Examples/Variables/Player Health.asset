@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 186a26b6d32709e479b6c13a3450a965, type: 3}
-  m_Name: Event
+  m_Script: {fileID: 11500000, guid: 1e3cfb04d81426a4a91f4087d421ee50, type: 3}
+  m_Name: Player Health
   m_EditorClassIdentifier: 
-  _description: Test event.
-  _debug: 1
+  _description: Controls the health of the Player.
+  _value: 10
