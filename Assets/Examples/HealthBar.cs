@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
 {
     #region Private Fields
 
+    [SerializeField] private Text _healthText;
     [SerializeField] private Image _healthBarFill;
     [SerializeField] private IntReference _health;
 
@@ -23,14 +24,17 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateFill();
+        UpdateHealth();
     }
 
     #region Public Methods
 
-    public void UpdateFill()
+    public void UpdateHealth()
     {
-        _healthBarFill.fillAmount = _health / _maxHealth;
+        _health.Value = Mathf.Clamp(_health, 0, _maxHealth);
+        
+        _healthText.text = $"{_health.Value} / {_maxHealth}";
+        _healthBarFill.fillAmount = _health.Value / (float)_maxHealth;
     }
 
     #endregion

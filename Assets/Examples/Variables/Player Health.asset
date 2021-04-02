@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _description: Controls the health of the Player.
   _value: 10
+  _onChangeEvent: {fileID: 11400000, guid: 7e1ee939597c85b40afe5ad261a32394, type: 2}
