@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     /// <summary>
     /// A Reference allows for the use of a <see cref="Variable{T}"/> or a value type.

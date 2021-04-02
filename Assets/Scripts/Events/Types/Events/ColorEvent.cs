@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     [CreateAssetMenu(fileName = CreateMenus.ColorVariableFileName, menuName = CreateMenus.ColorEventMenu,
         order = CreateMenus.ColorEventOrder)]
-    public class ColorEvent : Event<Color>
+    public class ColorEvent : GameEvent<Color>
     {
         
     }

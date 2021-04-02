@@ -1,4 +1,4 @@
-﻿namespace ScriptableArchitecture.Variables
+﻿namespace ManyTools.Variables
 {
     [System.Serializable]
     public class BoolReference : Reference<bool, BoolVariable>

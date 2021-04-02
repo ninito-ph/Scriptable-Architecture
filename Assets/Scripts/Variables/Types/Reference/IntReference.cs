@@ -1,4 +1,4 @@
-﻿namespace ScriptableArchitecture.Variables
+﻿namespace ManyTools.Variables
 {
     [System.Serializable]
     public class IntReference : Reference<int, IntVariable>

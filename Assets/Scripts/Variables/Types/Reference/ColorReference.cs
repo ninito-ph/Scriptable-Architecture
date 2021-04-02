@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     [System.Serializable]
     public class ColorReference : Reference<Color, ColorVariable>

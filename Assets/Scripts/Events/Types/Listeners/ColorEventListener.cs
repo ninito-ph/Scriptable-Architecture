@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     public class ColorEventListener : EventListener<Color>
     {
@@ -15,7 +15,7 @@ namespace ScriptableArchitecture.Events
         #region EventListener Implementation
 
         public override UnityEvent<Color> UnityEvent => _unityEvent;
-        public override Event<Color> Event => _event;
+        public override GameEvent<Color> GameEvent => _event;
 
         #endregion
     }

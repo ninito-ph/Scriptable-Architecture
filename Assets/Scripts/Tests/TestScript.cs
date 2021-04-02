@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using ScriptableArchitecture.Variables;
+using ManyTools.Variables;
 
 public class TestScript : MonoBehaviour
 {

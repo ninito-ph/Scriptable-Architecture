@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     [System.Serializable]
     public class AudioClipReference : Reference<AudioClip, AudioClipVariable>

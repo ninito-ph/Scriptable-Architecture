@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     [CreateAssetMenu(fileName = CreateMenus.AnimationCurveEventFilename, 
         menuName = CreateMenus.AnimationCurveEventMenu, order = CreateMenus.AnimationCurveEventOrder)]
-    public class AnimationCurveEvent : Event<AnimationCurve>
+    public class AnimationCurveEvent : GameEvent<AnimationCurve>
     {
     }
 }

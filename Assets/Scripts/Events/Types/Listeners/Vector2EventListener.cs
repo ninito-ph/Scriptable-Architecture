@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     public class Vector2EventListener : EventListener<Vector2>
     {
@@ -15,7 +15,7 @@ namespace ScriptableArchitecture.Events
         #region EventListener Implementation
 
         public override UnityEvent<Vector2> UnityEvent => _unityEvent;
-        public override Event<Vector2> Event => _event;
+        public override GameEvent<Vector2> GameEvent => _event;
 
         #endregion
     }

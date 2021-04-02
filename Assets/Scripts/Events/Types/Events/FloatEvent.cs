@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     [CreateAssetMenu(fileName = CreateMenus.FloatEventFilename, menuName = CreateMenus.FloatEventMenu,
         order = CreateMenus.FloatEventOrder)]
-    public class FloatEvent : Event<float>
+    public class FloatEvent : GameEvent<float>
     {
         
     }

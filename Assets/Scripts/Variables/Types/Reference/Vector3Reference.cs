@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     [System.Serializable]
     public class Vector3Reference : Reference<Vector3, Vector3Variable>

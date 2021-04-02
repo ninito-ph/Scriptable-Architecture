@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using ScriptableArchitecture.Events.Types;
+using ManyTools.Events.Types;
 using UnityEngine;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     /// <summary>
     /// A class that contains a invokable event for communication between scripts
     /// </summary>
     [CreateAssetMenu(fileName = CreateMenus.EventFileName, menuName = CreateMenus.EventMenu, 
         order = CreateMenus.EventOrder)]
-    public class Event : ScriptableObject
+    public sealed class GameEvent : ScriptableObject, IEvent
     {
         #region Private Fields
         [Multiline] [SerializeField]
@@ -30,7 +30,9 @@ namespace ScriptableArchitecture.Events
         #endregion
         
         #region Public Functions
-        [ContextMenu("Invoke")]
+        /// <summary>
+        /// Invokes the event
+        /// </summary>
         public void Invoke()
         {
             if (_debug)
@@ -73,7 +75,7 @@ namespace ScriptableArchitecture.Events
 
     }
 
-    public class Event<T> : ScriptableObject
+    public class GameEvent<T> : ScriptableObject, IEvent
     {
         #region Private Fields
 
@@ -104,7 +106,9 @@ namespace ScriptableArchitecture.Events
         #endregion
         
         #region Public Functions
-        [ContextMenu("Invoke")]
+        /// <summary>
+        /// Invokes the event
+        /// </summary>
         public void Invoke()
         {
             if (_debug)

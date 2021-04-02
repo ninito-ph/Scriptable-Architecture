@@ -1,4 +1,4 @@
-﻿namespace ScriptableArchitecture
+﻿namespace ManyTools
 {
     /// <summary>
     /// The create menu file for ScriptableArchitecture

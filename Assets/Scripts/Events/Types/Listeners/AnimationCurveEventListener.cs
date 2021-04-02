@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     public class AnimationCurveEventListener : EventListener<AnimationCurve>
     {
@@ -15,7 +15,7 @@ namespace ScriptableArchitecture.Events
         #region EventListener Implementation
 
         public override UnityEvent<AnimationCurve> UnityEvent => _unityEvent;
-        public override Event<AnimationCurve> Event => _event;
+        public override GameEvent<AnimationCurve> GameEvent => _event;
 
         #endregion
     }

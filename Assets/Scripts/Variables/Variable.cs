@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     /// <summary>
     /// ScriptableObject-based variable base class, that stores a value of a given type

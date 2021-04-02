@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     public class GameObjectEventListener : EventListener<GameObject>
     {
@@ -15,7 +15,7 @@ namespace ScriptableArchitecture.Events
         #region EventListener Implementation
 
         public override UnityEvent<GameObject> UnityEvent => _unityEvent;
-        public override Event<GameObject> Event => _event;
+        public override GameEvent<GameObject> GameEvent => _event;
 
         #endregion
     }

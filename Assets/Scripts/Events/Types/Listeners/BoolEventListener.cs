@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     public class BoolEventListener : EventListener<bool>
     {
@@ -15,7 +15,7 @@ namespace ScriptableArchitecture.Events
         #region EventListener Implementation
 
         public override UnityEvent<bool> UnityEvent => _unityEvent;
-        public override Event<bool> Event => _event;
+        public override GameEvent<bool> GameEvent => _event;
 
         #endregion
     }

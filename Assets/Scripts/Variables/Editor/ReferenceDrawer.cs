@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using ScriptableArchitecture.Variables;
+using ManyTools.Variables;
 using UnityEditor;
 using UnityEngine;
 
-namespace ScriptableArchitecture.Editor
+namespace ManyTools.Editor
 {
     /// <summary>
     /// A property drawer for reference variables.

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     [CreateAssetMenu(fileName = CreateMenus.GameObjectVariableFileName, 
         menuName = CreateMenus.GameObjectVariableMenu, order = CreateMenus.GameObjectVariableOrder)]

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Variables
+namespace ManyTools.Variables
 {
     [CreateAssetMenu(fileName = CreateMenus.Vector3VariableFileName, menuName = CreateMenus.Vector3VariableMenu, 
         order = CreateMenus.Vector3VariableOrder)]

@@ -1,27 +1,27 @@
 ﻿using System;
-using ScriptableArchitecture.Events.Types;
+using ManyTools.Events.Types;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     /// <summary>
-    /// Listens to an <see cref="Event"/>.
+    /// Listens to an <see cref="GameEventBase"/>.
     /// </summary>
     public class EventListener : MonoBehaviour
     {
         #region Private Fields
 
-        [SerializeField] private Event _event;
+        [SerializeField] private GameEvent _gameEvent;
         [SerializeField] private UnityEvent _onEventInvoked;
 
         #endregion
 
         #region Properties
 
-        public Event Event
+        public GameEvent GameEvent
         {
-            get => _event;
+            get => _gameEvent;
         }
 
         #endregion
@@ -30,12 +30,12 @@ namespace ScriptableArchitecture.Events
 
         private void OnEnable()
         {
-            _event.AddListener(this);
+            _gameEvent.AddListener(this);
         }
 
         private void OnDisable()
         {
-            _event.RemoveListener(this);
+            _gameEvent.RemoveListener(this);
         }
 
         #endregion
@@ -62,7 +62,7 @@ namespace ScriptableArchitecture.Events
         #region Abstract Properties
 
         public abstract UnityEvent<T> UnityEvent { get; }
-        public abstract Event<T> Event { get; }
+        public abstract GameEvent<T> GameEvent { get; }
 
         #endregion
 
@@ -70,12 +70,12 @@ namespace ScriptableArchitecture.Events
 
         private void OnEnable()
         {
-            Event.AddListener(this);
+            GameEvent.AddListener(this);
         }
 
         private void OnDisable()
         {
-            Event.RemoveListener(this);
+            GameEvent.RemoveListener(this);
         }
 
         #endregion

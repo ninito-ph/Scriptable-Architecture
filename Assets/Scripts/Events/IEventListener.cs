@@ -1,4 +1,4 @@
-﻿namespace ScriptableArchitecture.Events.Types
+﻿namespace ManyTools.Events.Types
 {
     public interface IEventListener<in T>
     {

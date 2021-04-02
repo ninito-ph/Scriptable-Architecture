@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace ScriptableArchitecture.Events
+namespace ManyTools.Events
 {
     [CreateAssetMenu(fileName = CreateMenus.AudioClipEventFileName, menuName = CreateMenus.AudioClipEventMenu,
         order = CreateMenus.AudioClipEventOrder)]
-    public class AudioClipEvent : Event<AudioClip>
+    public class AudioClipEvent : GameEvent<AudioClip>
     {
         
     }
