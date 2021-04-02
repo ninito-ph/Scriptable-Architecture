@@ -1,4 +1,5 @@
 ﻿using System;
+using ManyTools.Events;
 using UnityEngine;
 
 namespace ManyTools.Variables
@@ -15,6 +16,7 @@ namespace ManyTools.Variables
         [SerializeField] [Multiline] private string _description = null;
         #pragma warning restore CS014
         [SerializeField] private T _value;
+        [SerializeField] private GameEvent _onChangeEvent;
 
         // [SerializeField] private EventScriptable _onUpdatedEvent = null;
         private T _runtimeValue;
@@ -60,10 +62,10 @@ namespace ManyTools.Variables
                 }
                 #endif
 
-                // if (_onUpdatedEvent != null)
-                // {
-                //     _onUpdatedEvent.Invoke();
-                // }
+                if (_onChangeEvent != null)
+                {
+                    _onChangeEvent.Invoke();
+                }
             }
         }
 
