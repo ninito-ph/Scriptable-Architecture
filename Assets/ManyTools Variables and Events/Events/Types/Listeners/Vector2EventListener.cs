@@ -15,7 +15,24 @@ namespace ManyTools.Events
         #region EventListener Implementation
 
         public override UnityEvent<Vector2> UnityEvent => _unityEvent;
-        public override GameEvent<Vector2> GameEvent => _event;
+        public override GameEvent<Vector2> GameEvent
+        {
+            get => _event;
+            set
+            {
+                if (_event != null)
+                {
+                    _event.RemoveListener(this);
+                }
+            
+                _event = value as Vector2Event;
+            
+                if (_event != null)
+                {
+                    _event.AddListener(this);
+                }
+            }
+        }
 
         #endregion
     }

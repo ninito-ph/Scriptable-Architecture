@@ -25,21 +25,40 @@ namespace ManyTools.Variables
         /// </summary>
         public T Value
         {
-            get => _useConstant ? _constant : (_variable.Value ?? _constant);
+            get => UseConstant ? _constant : (Variable.Value ?? _constant);
             
             set
             {
-                if (_useConstant == true)
+                if (UseConstant == true)
                 {
                     _constant = value;
                 }
             
-                if (_variable != null)
+                if (Variable != null)
                 {
-                    _variable.Value = value;
+                    Variable.Value = value;
                 }
             }
         }
+
+        /// <summary>
+        /// Gets the variable of the reference
+        /// </summary>
+        public U Variable
+        {
+            get => _variable;
+            set => _variable = value;
+        }
+
+        /// <summary>
+        /// Gets whether the variable is using a constant or not
+        /// </summary>
+        public bool UseConstant
+        {
+            get => _useConstant;
+            set => _useConstant = value;
+        }
+
         #endregion
 
         #region Implicit Operator
@@ -61,7 +80,7 @@ namespace ManyTools.Variables
         /// </summary>
         public Reference()
         {
-            _useConstant = true;
+            UseConstant = true;
         }
 
         /// <summary>
@@ -70,7 +89,7 @@ namespace ManyTools.Variables
         /// <param name="startingValue">The starting value of the constant</param>
         public Reference(T startingValue)
         {
-            _useConstant = true;
+            UseConstant = true;
             _constant = startingValue;
         }
 

@@ -22,20 +22,25 @@ namespace ManyTools.Events
         public GameEvent GameEvent
         {
             get => _gameEvent;
+            set
+            {
+                if (_gameEvent != null)
+                {
+                    _gameEvent.RemoveListener(this);
+                }
+
+                _gameEvent = value;
+
+                if (_gameEvent != null)
+                {
+                    _gameEvent.AddListener(this);
+                }
+            }
         }
 
-        #endregion
-
-        #region MonoBehaviour Implementation
-
-        private void OnEnable()
+        public UnityEvent UnityEvent
         {
-            _gameEvent.AddListener(this);
-        }
-
-        private void OnDisable()
-        {
-            _gameEvent.RemoveListener(this);
+            get => _onEventInvoked;
         }
 
         #endregion
@@ -62,21 +67,7 @@ namespace ManyTools.Events
         #region Abstract Properties
 
         public abstract UnityEvent<T> UnityEvent { get; }
-        public abstract GameEvent<T> GameEvent { get; }
-
-        #endregion
-
-        #region MonoBehaviour Implementation
-
-        private void OnEnable()
-        {
-            GameEvent.AddListener(this);
-        }
-
-        private void OnDisable()
-        {
-            GameEvent.RemoveListener(this);
-        }
+        public abstract GameEvent<T> GameEvent { get; set; }
 
         #endregion
 

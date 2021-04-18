@@ -15,7 +15,24 @@ namespace ManyTools.Events
         #region EventListener Implementation
 
         public override UnityEvent<AnimationCurve> UnityEvent => _unityEvent;
-        public override GameEvent<AnimationCurve> GameEvent => _event;
+        public override GameEvent<AnimationCurve> GameEvent
+        {
+            get => _event;
+            set
+            {
+                if (_event != null)
+                {
+                    _event.RemoveListener(this);
+                }
+            
+                _event = value as AnimationCurveEvent;
+            
+                if (_event != null)
+                {
+                    _event.AddListener(this);
+                }
+            }
+        }
 
         #endregion
     }

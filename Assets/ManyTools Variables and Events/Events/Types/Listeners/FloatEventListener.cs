@@ -15,7 +15,24 @@ namespace ManyTools.Events
         #region EventListener Implementation
 
         public override UnityEvent<float> UnityEvent => _unityEvent;
-        public override GameEvent<float> GameEvent => _event;
+        public override GameEvent<float> GameEvent
+        {
+            get => _event;
+            set
+            {
+                if (_event != null)
+                {
+                    _event.RemoveListener(this);
+                }
+            
+                _event = value as FloatEvent;
+            
+                if (_event != null)
+                {
+                    _event.AddListener(this);
+                }
+            }
+        }
 
         #endregion
     }

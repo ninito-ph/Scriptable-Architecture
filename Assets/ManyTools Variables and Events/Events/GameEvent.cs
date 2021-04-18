@@ -123,6 +123,23 @@ namespace ManyTools.Events
         }
 
         /// <summary>
+        /// Invokes the event with a specific value
+        /// </summary>
+        /// <param name="value">The specific value to invoke with</param>
+        public void Invoke(T value)
+        {
+            if (_debug)
+            {
+                Debug.Log($"<b>{name}</b> event raised successfully with value: {_value}.", this);
+            }
+
+            for (int index = 0, upper = _listeners.Count; index < upper; index++)
+            {
+                _listeners[index].OnEventInvoked(value);
+            }
+        }
+
+        /// <summary>
         /// Adds a listener to the event
         /// </summary>
         /// <param name="listener">The listener to be added</param>
