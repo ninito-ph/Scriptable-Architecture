@@ -43,7 +43,7 @@
 This is just one of the many publicly available implementations of ScriptableObject-based variables and events. This implementation, however, is focused on being as minimal, clean and reliable as possible. 
 
 Here are the premises:
-* No bloating or interdepency. If I only need events, I should be able to remove variables from my project, and vice-versa.
+* No bloating and minimal interdepency. If I only need events, I should be able to easily remove variables from my project, and vice-versa.
 * No excess features, no huge amounts of files and code. I should be able to easily understand what each piece of the package does.
 * No blindly trusting that it works. I should be able to verify myself that the package works easily and efficiently.
 
@@ -52,8 +52,8 @@ Here are the premises:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+If you're looking to test and try out the plugin before you commit, clone the repo and open the Unity project. The easiest and fastest way of testing if the project works is by running all tests in the test runner.
+If you just want to download and use it, head over to the releases page and grab the latest UnityPackage.
 
 ### Prerequisites
 
