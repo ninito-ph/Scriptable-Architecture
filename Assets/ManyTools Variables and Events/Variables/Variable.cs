@@ -18,7 +18,6 @@ namespace ManyTools.Variables
         [SerializeField] private T _value;
         [SerializeField] private GameEvent _onChangeEvent;
 
-        // [SerializeField] private EventScriptable _onUpdatedEvent = null;
         private T _runtimeValue;
         private GameEvent _runtimeOnChangeEvent;
 
@@ -28,7 +27,8 @@ namespace ManyTools.Variables
 
         private void OnEnable()
         {
-            if (_onChangeEvent != null)
+            // If the runtime event has not been set, set it
+            if (_onChangeEvent != null && _runtimeOnChangeEvent == null)
             {
                 _runtimeOnChangeEvent = _onChangeEvent;
             }
@@ -180,6 +180,7 @@ namespace ManyTools.Variables
         public void OnAfterDeserialize()
         {
             _runtimeValue = _value;
+            _runtimeOnChangeEvent = null;
         }
 
         public void OnBeforeSerialize()
