@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
-using ManyTools.Variables;
+using Ninito.ScriptableArchitecture.Variables;
 using UnityEditor;
 using UnityEngine;
 
-namespace ManyTools.Editor
+namespace Ninito.ScriptableArchitecture.Editor
 {
     /// <summary>
     /// A property drawer for reference variables.
     /// </summary>
+    #if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(AnimationCurveReference))]
     [CustomPropertyDrawer(typeof(BoolReference))]
     [CustomPropertyDrawer(typeof(ColorReference))]
@@ -162,4 +163,5 @@ namespace ManyTools.Editor
 
         #endregion
     }
+    #endif
 }
