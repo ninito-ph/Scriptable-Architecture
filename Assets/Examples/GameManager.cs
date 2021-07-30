@@ -1,4 +1,4 @@
-using ManyTools.Variables;
+using Ninito.ScriptableArchitecture.Variables;
 using UnityEngine;
 using UnityEngine.UI;
 

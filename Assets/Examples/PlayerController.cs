@@ -1,40 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
-using ManyTools.Variables;
+using Ninito.ScriptableArchitecture.Variables;
 using UnityEngine;
 
-namespace ManyTools
+namespace Ninito.ScriptableArchitecture
 {
     public class PlayerController : MonoBehaviour
     {
         #region Private Fields
         [SerializeField]
-        private IntReference _health;
+        private IntReference health;
         [SerializeField]
-        private FloatReference _speed;
+        private FloatReference speed;
         #endregion
 
-        #region MonoBehaviour Implementation
+        #region Unity Callbacks
+        
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             MovePlayer();
         }
+        
         #endregion
 
         #region Public Methods
+        
         public void TakeDamage(int damage)
         {
-            _health.Value -= damage;
+            health.Value -= damage;
         }
+        
         #endregion
         
         #region Private Methods
+        
         private void MovePlayer()
         {
             float horizontalInput = Input.GetAxis("Horizontal");
-            transform.Translate(_speed * horizontalInput * Time.deltaTime, 0f, 0f);
+            transform.Translate(speed * horizontalInput * Time.deltaTime, 0f, 0f);
         }
+        
         #endregion
     }
 }

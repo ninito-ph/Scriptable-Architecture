@@ -1,0 +1,14 @@
+{
+    "name": "Ninito ScriptableArchitecture",
+    "rootNamespace": "Ninito.ScriptableArchitecture",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
