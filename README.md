@@ -2,12 +2,12 @@
 <br />
 <p align="center">
   <a href="https://github.com/ninito-ph/ManyTools-Variables-and-Events">
-    <img src="https://i.imgur.com/I8avjE0.png" alt="ManyTools Variables and Events" width="350" height="350">
+    <img src="https://i.imgur.com/6o0Jfx0.png" alt="Ninito's Scriptable Architecture" width="280" height="280">
   </a>
 
-  <h3 align="center">ManyTools Variables and Events</h3>
+  <h3 align="center">Ninito's Scriptable Architecture</h3>
   <p align="center">
-    Simple, straightforward ScriptableObject variables and events to kickstart your Unity project!
+    Simple but versatile implementations of Ryan Hipple's ScriptableObject usages and ideas!
     <br />
     <br />
   </p>
@@ -40,12 +40,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is just one of the many publicly available implementations of ScriptableObject-based variables and events. This implementation, however, is focused on being as minimal, clean and reliable as possible. 
+This is just one of the many publicly available implementations of ScriptableObject-based game architecture. This implementation, however, is focused on being versatile
 
 Here are the premises:
-* No bloating and minimal interdepency. If I only need events, I should be able to easily remove variables from my project, and vice-versa.
-* No excess features, no huge amounts of files and code. I should be able to easily understand what each piece of the package does.
-* No blindly trusting that it works. I should be able to verify myself that the package works easily and efficiently.
+* Variables and events should be designer-friendly. Custom icons and description fields work to facilitate that. 
+* Variables should be highly versatile and transparent. This makes them more testable, powerful and tool-friendly.
+* Unit tested. This makes modifying them easier and their use generally safer.
 
 
 
@@ -57,7 +57,7 @@ If you just want to download and use it, head over to the releases page and grab
 
 ### Prerequisites
 
-This implementation of Variables and Events has been tested on 2020 and 2019 LTS. If you want to test it on another version, the Unit tests will help you out!
+This implementation of Variables and Events has been tested on 2020 LTS and 2019 LTS. They should work on previous and future versions of Unity.
 
 ### Installation
 
@@ -67,7 +67,7 @@ This implementation of Variables and Events has been tested on 2020 and 2019 LTS
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-If you are not familiar with the concepts of ScriptableObject Variables and Events, please refer to this great [Unite Talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) by _Ryan Hipple_.
+If you are not familiar with the concepts of ScriptableObject variables, events and other ScriptableObject-based approaches, please refer to this great [Unite Talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) by _Ryan Hipple_.
 
 
 <!-- CONTACT -->
