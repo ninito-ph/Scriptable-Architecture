@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using ManyTools.Variables;
+using Ninito.ScriptableArchitecture.Variables;
 using UnityEngine;
 using UnityEngine.UI;
 

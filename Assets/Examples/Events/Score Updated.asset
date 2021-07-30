@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186a26b6d32709e479b6c13a3450a965, type: 3}
   m_Name: Score Updated
   m_EditorClassIdentifier: 
-  _description: Raised when the score is updated.
-  _debug: 0
+  description: 
+  _debug: 1
