@@ -1,23 +1,28 @@
-using System;
 using UnityEngine;
 
 namespace Ninito.ScriptableArchitecture.RuntimeSets
 {
     public class GameObjectRuntimeSetModifier : RuntimeSetModifier<GameObjectRuntimeSet, GameObject>
     {
-        protected override void ModifyRuntimeSet()
+        #region Unity Callbacks
+
+        private void Reset()
         {
-            switch (mode)
-            {
-                case Mode.Add:
-                    runtimeSet.Add(objectKey, objectToAdd);
-                    break;
-                case Mode.Remove:
-                    runtimeSet.Remove(objectKey);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            GameObject gameObjectCache = gameObject;
+            
+            objectToAdd = gameObjectCache;
+            objectKey = gameObjectCache.name;
         }
+
+        #endregion
+
+        #region Abstract Implementations
+
+        protected override void AddToRuntimeSet()
+        {
+            runtimeSet.Add(objectKey, objectToAdd);
+        }
+
+        #endregion
     }
 }
