@@ -1,4 +1,4 @@
-﻿namespace ManyTools.Events.Types
+﻿namespace Ninito.ScriptableArchitecture.Events.Types
 {
     public interface IEventListener<in T>
     {

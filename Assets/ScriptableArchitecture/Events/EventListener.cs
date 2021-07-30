@@ -1,19 +1,19 @@
 ﻿using System;
-using ManyTools.Events.Types;
+using Ninito.ScriptableArchitecture.Events.Types;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
     /// <summary>
-    /// Listens to an <see cref="GameEventBase"/>.
+    ///     Listens to a GameEvent
     /// </summary>
     public class EventListener : MonoBehaviour
     {
         #region Private Fields
 
         [SerializeField] private GameEvent _gameEvent;
-        [SerializeField] private UnityEvent _onEventInvoked;
+        [SerializeField] private UnityEvent _onEventInvoked = new UnityEvent();
 
         #endregion
 
@@ -38,13 +38,26 @@ namespace ManyTools.Events
             }
         }
 
-        public UnityEvent UnityEvent
-        {
-            get => _onEventInvoked;
-        }
+        public UnityEvent UnityEvent => _onEventInvoked;
 
         #endregion
 
+        #region Unity Callbacks
+
+        private void Start()
+        {
+            if (GameEvent == null) return;
+            GameEvent.AddListener(this);
+        }
+
+        private void OnDestroy()
+        {
+            if (GameEvent == null) return;
+            GameEvent.RemoveListener(this);
+        }
+
+        #endregion
+        
         #region Public Methods
 
         /// <summary>
@@ -59,7 +72,7 @@ namespace ManyTools.Events
     }
 
     /// <summary>
-    /// Listens to an event with an argument of type T
+    ///     Listens to a GameEvent with an argument of type T
     /// </summary>
     /// <typeparam name="T">An argument of type T</typeparam>
     public abstract class EventListener<T> : MonoBehaviour, IEventListener<T>
@@ -71,6 +84,22 @@ namespace ManyTools.Events
 
         #endregion
 
+        #region Unity Callbacks
+
+        private void Start()
+        {
+            if (GameEvent == null) return;
+            GameEvent.AddListener(this);
+        }
+
+        private void OnDestroy()
+        {
+            if (GameEvent == null) return;
+            GameEvent.RemoveListener(this);
+        }
+
+        #endregion
+        
         #region Public Methods
 
         /// <summary>
