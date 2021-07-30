@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is just one of the many publicly available implementations of ScriptableObject-based game architecture. This implementation, however, is focused on being versatile
+This is just one of the many publicly available implementations of ScriptableObject-based game architecture. This implementation, however, is focused on being versatile, feature-rich and editor tool-friendly.
 
 Here are the premises:
 * Variables and events should be designer-friendly. Custom icons and description fields work to facilitate that. 
