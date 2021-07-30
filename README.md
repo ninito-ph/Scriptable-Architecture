@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/ninito-ph/ManyTools-Variables-and-Events">
+  <a href="https://github.com/ninito-ph/Scriptable-Architecture">
     <img src="https://i.imgur.com/kTngmqt.png" alt="Ninito's Scriptable Architecture" width="400" height="400">
   </a>
 
@@ -66,7 +66,7 @@ If you are not familiar with the concepts of ScriptableObject variables, events 
 
 Paulo Oliveira - paulo at ninito dot me
 
-Project Link: [https://github.com/ninito-ph/ManyTools-Variables-and-Events](https://github.com/ninito-ph/ManyTools-Variables-and-Events)
+Project Link: [https://github.com/ninito-ph/Scriptable-Architecture](https://github.com/ninito-ph/Scriptable-Architecture)
 
 
 
