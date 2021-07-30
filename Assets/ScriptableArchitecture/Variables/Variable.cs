@@ -1,8 +1,8 @@
 ﻿using System;
-using ManyTools.Events;
+using Ninito.ScriptableArchitecture.Events;
 using UnityEngine;
 
-namespace ManyTools.Variables
+namespace Ninito.ScriptableArchitecture.Variables
 {
     /// <summary>
     /// ScriptableObject-based variable base class, that stores a value of a given type
@@ -18,6 +18,7 @@ namespace ManyTools.Variables
         [SerializeField] private T _value;
         [SerializeField] private GameEvent _onChangeEvent;
 
+        // [SerializeField] private EventScriptable _onUpdatedEvent = null;
         private T _runtimeValue;
         private GameEvent _runtimeOnChangeEvent;
 
@@ -27,8 +28,7 @@ namespace ManyTools.Variables
 
         private void OnEnable()
         {
-            // If the runtime event has not been set, set it
-            if (_onChangeEvent != null && _runtimeOnChangeEvent == null)
+            if (_onChangeEvent != null)
             {
                 _runtimeOnChangeEvent = _onChangeEvent;
             }
@@ -38,26 +38,14 @@ namespace ManyTools.Variables
         
         #region Properties
 
-        /// <summary>
-        /// Gets the runtime or editor value of the Hybrid Type depending on
-        /// whether the game is running, or simply in the editor
-        /// </summary>
-        /// <value>The value of the Hybrid Type</value>
         public virtual T Value
         {
             get
             {
                 #if UNITY_EDITOR
-                if (Application.isPlaying)
-                {
-                    #endif
-                    return _runtimeValue;
-                    #if UNITY_EDITOR
-                }
-                else
-                {
-                    return _value;
-                }
+                
+                return Application.isPlaying ? _runtimeValue : _value;
+                
                 #endif
             }
             set
@@ -86,10 +74,7 @@ namespace ManyTools.Variables
         /// Gets the variable's value at the start of the runtime
         /// </summary>
         /// <value>The value at the start of the runtime</value>
-        public virtual T StartingValue
-        {
-            get { return _value; }
-        }
+        public virtual T StartingValue => _value;
 
         /// <summary>
         /// Alters or returns the change event of the variable
@@ -99,16 +84,9 @@ namespace ManyTools.Variables
             get
             {
                 #if UNITY_EDITOR
-                if (Application.isPlaying)
-                {
-                    #endif
-                    return _runtimeOnChangeEvent;
-                    #if UNITY_EDITOR
-                }
-                else
-                {
-                    return _onChangeEvent;
-                }
+                
+                return Application.isPlaying ? _runtimeOnChangeEvent : _onChangeEvent;
+                
                 #endif
             }
             set
@@ -154,10 +132,10 @@ namespace ManyTools.Variables
             #if UNITY_EDITOR
             if (Application.isPlaying)
             {
-            #endif
+                #endif
                 _runtimeValue = initialValue;
                 _value = initialValue;
-            #if UNITY_EDITOR
+                #if UNITY_EDITOR
             }
             else
             {
@@ -180,7 +158,6 @@ namespace ManyTools.Variables
         public void OnAfterDeserialize()
         {
             _runtimeValue = _value;
-            _runtimeOnChangeEvent = null;
         }
 
         public void OnBeforeSerialize()
