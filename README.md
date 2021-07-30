@@ -2,17 +2,8 @@
 <br />
 <p align="center">
   <a href="https://github.com/ninito-ph/ManyTools-Variables-and-Events">
-    <img src="https://i.imgur.com/6o0Jfx0.png" alt="Ninito's Scriptable Architecture" width="280" height="280">
+    <img src="https://i.imgur.com/kTngmqt.png" alt="Ninito's Scriptable Architecture" width="400" height="400">
   </a>
-
-  <h3 align="center">Ninito's Scriptable Architecture</h3>
-  <p align="center">
-    Simple but versatile implementations of Ryan Hipple's ScriptableObject usages and ideas!
-    <br />
-    <br />
-  </p>
-</p>
-
 
 
 <!-- TABLE OF CONTENTS -->
