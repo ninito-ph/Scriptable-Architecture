@@ -1,17 +1,21 @@
 {
-    "name": "PlayMode",
+    "name": "Tests.PlayMode",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "VariablesAndEvents"
+        "Ninito ScriptableArchitecture"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll"
+        "nunit.framework.dll",
+        "FluentAssertions.dll",
+        "NSubstitute.dll",
+        "Castle.Core.dll",
+        "System.Threading.Tasks.Extensions.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [
