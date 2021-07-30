@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ManyTools.Variables
+namespace Ninito.ScriptableArchitecture.Variables
 {
     /// <summary>
     /// A Reference allows for the use of a <see cref="Variable{T}"/> or a value type.
