@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
     /// <summary>
     /// An editor with a simple invoke button for the Event class
     /// </summary>
+    #if UNITY_EDITOR
     [CustomEditor(typeof(GameEvent))]
     public sealed class GameEventEditor : UnityEditor.Editor
     {
@@ -92,4 +93,5 @@ namespace ManyTools.Events
 
         #endregion
     }
+    #endif
 }

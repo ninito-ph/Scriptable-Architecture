@@ -1,11 +1,13 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
+    #if UNITY_EDITOR
     [CustomEditor(typeof(AnimationCurveEvent))]
     public class AnimationCurveEventEditor : GameEventEditor<AnimationCurve>
     {
         
     }
+    #endif
 }
