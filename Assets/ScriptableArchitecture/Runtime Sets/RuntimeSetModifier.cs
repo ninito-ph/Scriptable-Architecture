@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Ninito.ScriptableArchitecture.RuntimeSets
@@ -20,35 +19,21 @@ namespace Ninito.ScriptableArchitecture.RuntimeSets
         
         [SerializeField]
         protected TU objectToAdd;
-        
-        [SerializeField]
-        protected Mode mode = Mode.Add;
 
         #endregion
 
         #region Unity Callbacks
 
-        private void Start()
+        private void Awake()
         {
-            ModifyRuntimeSet();
+            AddToRuntimeSet();
         }
 
         #endregion
 
         #region Protected Methods
 
-        protected abstract void ModifyRuntimeSet();
-
-        #endregion
-
-        #region Protected Enums
-
-        [Serializable]
-        protected enum Mode
-        {
-            Add,
-            Remove
-        }
+        protected abstract void AddToRuntimeSet();
 
         #endregion
     }
