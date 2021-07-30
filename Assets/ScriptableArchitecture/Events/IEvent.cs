@@ -1,4 +1,4 @@
-﻿namespace ManyTools.Events
+﻿namespace Ninito.ScriptableArchitecture.Events
 {
     public interface IEvent
     {
