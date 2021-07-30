@@ -1,6 +1,6 @@
 {
-    "name": "VariablesAndEvents",
-    "rootNamespace": "ManyTools.VariablesAndEvents",
+    "name": "Ninito ScriptableArchitecture",
+    "rootNamespace": "Ninito.ScriptableArchitecture",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
