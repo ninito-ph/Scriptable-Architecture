@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ManyTools.Variables
+namespace Ninito.ScriptableArchitecture.Variables
 {
     [System.Serializable]
     public class AnimationCurveReference : Reference<AnimationCurve, AnimationCurveVariable>

@@ -1,4 +1,4 @@
-﻿namespace ManyTools.Variables
+﻿namespace Ninito.ScriptableArchitecture.Variables
 {
     [System.Serializable]
     public class StringReference : Reference<string, StringVariable>

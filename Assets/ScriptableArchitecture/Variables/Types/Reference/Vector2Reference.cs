@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ManyTools.Variables
+namespace Ninito.ScriptableArchitecture.Variables
 {
     [System.Serializable]
     public class Vector2Reference : Reference<Vector2, Vector2Variable>
