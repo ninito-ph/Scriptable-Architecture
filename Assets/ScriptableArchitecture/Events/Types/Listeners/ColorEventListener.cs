@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
-    public class BoolEventListener : EventListener<bool>
+    public class ColorEventListener : EventListener<Color>
     {
         #region Private Fields
 
-        [SerializeField] private BoolEvent _event;
-        [SerializeField] private UnityEvent<bool> _unityEvent;
+        [SerializeField] private ColorEvent _event;
+        [SerializeField] private UnityEvent<Color> _unityEvent = new UnityEvent<Color>();
         
         #endregion
 
         #region EventListener Implementation
 
-        public override UnityEvent<bool> UnityEvent => _unityEvent;
-        public override GameEvent<bool> GameEvent
+        public override UnityEvent<Color> UnityEvent => _unityEvent;
+        public override GameEvent<Color> GameEvent
         {
             get => _event;
             set
@@ -25,7 +25,7 @@ namespace ManyTools.Events
                     _event.RemoveListener(this);
                 }
             
-                _event = value as BoolEvent;
+                _event = value as ColorEvent;
             
                 if (_event != null)
                 {

@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
-    public class ColorEventListener : EventListener<Color>
+    public class AnimationCurveEventListener : EventListener<AnimationCurve>
     {
         #region Private Fields
 
-        [SerializeField] private ColorEvent _event;
-        [SerializeField] private UnityEvent<Color> _unityEvent;
+        [SerializeField] private AnimationCurveEvent _event;
+        [SerializeField] private UnityEvent<AnimationCurve> _unityEvent = new UnityEvent<AnimationCurve>();
         
         #endregion
 
         #region EventListener Implementation
 
-        public override UnityEvent<Color> UnityEvent => _unityEvent;
-        public override GameEvent<Color> GameEvent
+        public override UnityEvent<AnimationCurve> UnityEvent => _unityEvent;
+        public override GameEvent<AnimationCurve> GameEvent
         {
             get => _event;
             set
@@ -25,7 +25,7 @@ namespace ManyTools.Events
                     _event.RemoveListener(this);
                 }
             
-                _event = value as ColorEvent;
+                _event = value as AnimationCurveEvent;
             
                 if (_event != null)
                 {

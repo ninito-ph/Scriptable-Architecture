@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
-    public class GameObjectEventListener : EventListener<GameObject>
+    public class AudioClipEventListener : EventListener<AudioClip>
     {
         #region Private Fields
 
-        [SerializeField] private GameObjectEvent _event;
-        [SerializeField] private UnityEvent<GameObject> _unityEvent;
+        [SerializeField] private AudioClipEvent _event;
+        [SerializeField] private UnityEvent<AudioClip> _unityEvent = new UnityEvent<AudioClip>();
         
         #endregion
 
         #region EventListener Implementation
 
-        public override UnityEvent<GameObject> UnityEvent => _unityEvent;
-        public override GameEvent<GameObject> GameEvent
+        public override UnityEvent<AudioClip> UnityEvent => _unityEvent;
+        public override GameEvent<AudioClip> GameEvent
         {
             get => _event;
             set
@@ -25,7 +25,7 @@ namespace ManyTools.Events
                     _event.RemoveListener(this);
                 }
             
-                _event = value as GameObjectEvent;
+                _event = value as AudioClipEvent;
             
                 if (_event != null)
                 {

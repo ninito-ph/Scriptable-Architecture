@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ManyTools.Events
+namespace Ninito.ScriptableArchitecture.Events
 {
-    public class FloatEventListener : EventListener<float>
+    public class Vector2EventListener : EventListener<Vector2>
     {
         #region Private Fields
 
-        [SerializeField] private FloatEvent _event;
-        [SerializeField] private UnityEvent<float> _unityEvent;
+        [SerializeField] private Vector2Event _event;
+        [SerializeField] private UnityEvent<Vector2> _unityEvent = new UnityEvent<Vector2>();
         
         #endregion
 
         #region EventListener Implementation
 
-        public override UnityEvent<float> UnityEvent => _unityEvent;
-        public override GameEvent<float> GameEvent
+        public override UnityEvent<Vector2> UnityEvent => _unityEvent;
+        public override GameEvent<Vector2> GameEvent
         {
             get => _event;
             set
@@ -25,7 +25,7 @@ namespace ManyTools.Events
                     _event.RemoveListener(this);
                 }
             
-                _event = value as FloatEvent;
+                _event = value as Vector2Event;
             
                 if (_event != null)
                 {
