@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0-stable] - Quiet Dust Release - 2021-09-04
+### Changed
+- Moved sample scripts to samples assembly definition.
+
 ## [v1.1.0-stable] - Polished Shadow Release - 2021-07-30
 ### Added
 - Added NSubstitute and FluentAssertions to Unit Tests.
