@@ -3,6 +3,11 @@
 <p align="center">
   <a href="https://github.com/ninito-ph/Scriptable-Architecture">
     <img src="https://i.imgur.com/kTngmqt.png" alt="Ninito's Scriptable Architecture" width="400" height="400">
+    <p align="center">
+    <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/ninito-ph/Scriptable-Architecture?label=version&style=for-the-badge">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ninito-ph/Scriptable-Architecture?label=size&style=for-the-badge">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ninito-ph/Scriptable-Architecture?style=for-the-badge">
+    </p>
   </a>
 
 
