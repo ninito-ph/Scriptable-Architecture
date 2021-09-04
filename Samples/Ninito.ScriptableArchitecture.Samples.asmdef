@@ -1,0 +1,16 @@
+{
+    "name": "Ninito.ScriptableArchitecture.Samples",
+    "rootNamespace": "Ninito.ScriptableArchitecture.Samples",
+    "references": [
+        "GUID:f8488ac59a4b5844e9dcf36cfe59e561"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
