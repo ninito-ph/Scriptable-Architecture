@@ -57,7 +57,10 @@ This implementation of Variables and Events has been tested on 2020 LTS and 2019
 
 ### Installation
 
-1. Download the latest UnityPackage and import into your project.
+1. Open the package manager.
+2. Click on the plus icon on the top left corner, and select 'Add package from git URL'.
+3. Paste in '[https://github.com/ninito-ph/Scriptable-Architecture.git](https://github.com/ninito-ph/Scriptable-Architecture.git)'.
+4. Import it into your project!
 
 
 <!-- USAGE EXAMPLES -->
