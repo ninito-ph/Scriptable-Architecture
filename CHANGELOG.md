@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.1-stable] - Radiant Surface Release - 2021-12-30
+### Added
+- Added icons to all scripts except ScriptableActions.
+- Added C# actions to EventListeners, so they can be listened to by C# scripts
+### Changed
+- Moved editor scripts to editor assembly definition.
+
 ## [v1.2.0-stable] - Quiet Dust Release - 2021-09-04
 ### Changed
 - Moved sample scripts to samples assembly definition.
@@ -23,9 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed critical bug in which EventListeners would not properly subscribe to their events on enter runtime.
 - Added null check to GameEvents calling their listeners.
 
-## [v1.0.2-stable] - Patient Bird Release - 2021-08-30
+## [v1.0.2-stable] - Snowy Water Release - 2021-04-19
 ### Fixed
-- Improved performance in asset renamer window.
+- Fixed bug in which disabling the ScriptableObject would cause it do inadvertently reset its runtime OnChangeEvent to its inspector (pre-runtime) OnChangeEvent.
 
 ## [v1.0.1-stable] - Snowy Water Release - 2021-04-19
 ### Fixed
