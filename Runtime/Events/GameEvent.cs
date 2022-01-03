@@ -26,6 +26,7 @@ namespace Ninito.ScriptableArchitecture.Events
         #region Properties
 
         public List<EventListener> Listeners { get; } = new List<EventListener>();
+        public Action ActionListeners { get; private set; }
 
         #endregion
 
@@ -41,6 +42,15 @@ namespace Ninito.ScriptableArchitecture.Events
                 Debug.Log($"<b>{name}</b> event raised to <b>{Listeners.Count}</b> listeners.", this);
             }
 
+            InvokeAllListeners();
+            InvokeAllActions();
+        }
+        
+        /// <summary>
+        /// Invokes all listeners
+        /// </summary>
+        private void InvokeAllListeners()
+        {
             for (int index = Listeners.Count - 1; index >= 0; index--)
             {
                 if (Listeners[index] == null)
@@ -48,7 +58,7 @@ namespace Ninito.ScriptableArchitecture.Events
                     Listeners.RemoveAt(index);
                     continue;
                 }
-                
+
                 if (_debug)
                 {
                     Debug.Log($"Listener <b>{Listeners[index]}</b> was called.");
@@ -56,6 +66,14 @@ namespace Ninito.ScriptableArchitecture.Events
 
                 Listeners[index].OnEventInvoked();
             }
+        }
+
+        /// <summary>
+        /// Invokes all action listeners
+        /// </summary>
+        private void InvokeAllActions()
+        {
+            ActionListeners?.Invoke();
         }
 
         /// <summary>
@@ -75,6 +93,24 @@ namespace Ninito.ScriptableArchitecture.Events
         {
             Listeners.Remove(listener);
         }
+        
+        /// <summary>
+        ///     Adds a listener to the event
+        /// </summary>
+        /// <param name="listener">The listener to be added</param>
+        public void AddListener(Action listener)
+        {
+            ActionListeners += listener;
+        }
+
+        /// <summary>
+        ///     Removes a listener from the event
+        /// </summary>
+        /// <param name="listener">The listener to be removed</param>
+        public void RemoveListener(Action listener)
+        {
+            ActionListeners -= listener;
+        }
 
         /// <summary>
         ///     Removes all listeners from the event
@@ -82,6 +118,7 @@ namespace Ninito.ScriptableArchitecture.Events
         public void RemoveAllListeners()
         {
             Listeners.Clear();
+            ActionListeners = null;
         }
 
         #endregion
@@ -106,6 +143,7 @@ namespace Ninito.ScriptableArchitecture.Events
         #region Properties
 
         public List<IEventListener<T>> Listeners { get; } = new List<IEventListener<T>>();
+        public Action<T> ActionListeners { get; private set; }
 
         public T Value
         {
@@ -159,6 +197,16 @@ namespace Ninito.ScriptableArchitecture.Events
                     this);
             }
 
+            InvokeAllListeners(value);
+            InvokeAllActions(value);
+        }
+
+        /// <summary>
+        /// Invokes all listeners
+        /// </summary>
+        /// <param name="value">The value to invoke with</param>
+        private void InvokeAllListeners(T value)
+        {
             for (int index = Listeners.Count - 1; index >= 0; index--)
             {
                 if (Listeners[index] == null)
@@ -166,7 +214,7 @@ namespace Ninito.ScriptableArchitecture.Events
                     Listeners.RemoveAt(index);
                     continue;
                 }
-                
+
                 if (_debug)
                 {
                     Debug.Log($"Listener <b>{Listeners[index]}</b> was called.");
@@ -174,6 +222,15 @@ namespace Ninito.ScriptableArchitecture.Events
 
                 Listeners[index].OnEventInvoked(value);
             }
+        }
+
+        /// <summary>
+        /// Invokes all action listeners
+        /// </summary>
+        /// <param name="value">The value to invoke with</param>
+        private void InvokeAllActions(T value)
+        {
+            ActionListeners.Invoke(value);
         }
 
         /// <summary>
@@ -192,6 +249,24 @@ namespace Ninito.ScriptableArchitecture.Events
         public void RemoveListener(IEventListener<T> listener)
         {
             Listeners.Remove(listener);
+        }
+        
+        /// <summary>
+        ///     Adds a listener to the event
+        /// </summary>
+        /// <param name="listener">The listener to be added</param>
+        public void AddListener(Action<T> listener)
+        {
+            ActionListeners += listener;
+        }
+
+        /// <summary>
+        ///     Removes a listener from the event
+        /// </summary>
+        /// <param name="listener">The listener to be removed</param>
+        public void RemoveListener(Action<T> listener)
+        {
+            ActionListeners -= listener;
         }
 
         /// <summary>
