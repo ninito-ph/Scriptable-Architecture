@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.2-stable] - United Howl Release - 2022-01-14
+### Fixed
+- Fixed bug in which #if UNITY_EDITOR regions would prevent compilation.
+
+
 ## [v1.2.1-stable] - Radiant Surface Release - 2021-12-30
 ### Added
 - Added icons to all scripts except ScriptableActions.

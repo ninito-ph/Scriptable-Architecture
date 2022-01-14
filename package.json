@@ -1,6 +1,6 @@
 {
   "name": "com.ninito.scriptablearchitecture",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "displayName": "Scriptable Architecture",
   "description": "This is just one of the many publicly available implementations of ScriptableObject-based game architecture. This implementation, however, is focused on being versatile, feature-rich and editor tool-friendly.\n Here are the premises:\n\n    Variables and events should be designer-friendly. Custom icons and description fields work to facilitate that.\n    Variables should be highly versatile and transparent. This makes them more testable, powerful and tool-friendly.\n    Unit tested. This makes modifying them easier and their use generally safer.\n",
   "unity": "2019.3",
