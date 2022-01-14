@@ -42,11 +42,7 @@ namespace Ninito.ScriptableArchitecture.Variables
         {
             get
             {
-                #if UNITY_EDITOR
-                
                 return Application.isPlaying ? _runtimeValue : _value;
-                
-                #endif
             }
             set
             {
@@ -83,11 +79,7 @@ namespace Ninito.ScriptableArchitecture.Variables
         {
             get
             {
-                #if UNITY_EDITOR
-                
                 return Application.isPlaying ? _runtimeOnChangeEvent : _onChangeEvent;
-                
-                #endif
             }
             set
             {
